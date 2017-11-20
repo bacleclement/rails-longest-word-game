@@ -1,9 +1,18 @@
-<h1>Games#score</h1>
-<p>******** Now your result ********</p>
 
-<p>Your word: <%= @attempt.upcase %> </p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <div class="result">
+        <h1 class="text-center">Your result</h1>
+        <ul>
+        <li><h2><strong>Your word:</strong> <%= @attempt.upcase %> </h2></li>
+        <li><h2><strong>Time Taken to answer:</strong> <%= @time %></h2></li>
+        <li><h2><strong>Your score:</strong>  <%= @score %> </h2></li>
+        <li><h2><strong>Message:</strong>  <%= @message %></h2></li>
+        <li><h2><%= link_to "Recommencez !", game_path %></h2><li>
+        </ul>
 
-<p>Time Taken to answer: <%= @time %></p>
-<p>Your score: <%= @score %> </p>
-<p>Message: <%= @message %></p>
-<p>*****************************************************</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,38 @@
 // Place all the styles related to the games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form-group {
+  // padding-left: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  padding-top: 150px;
+}
+
+#grid {
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+}
+
+.btn-primary {
+  margin-top: 15px;
+}
+
+body {
+  background-color: #01A2A6 !important;
+}
+
+.result {
+  font-family: 'Raleway', sans-serif;
+  padding-top: 150px;
+}
+
+ul {
+  list-style-type: none;
+}

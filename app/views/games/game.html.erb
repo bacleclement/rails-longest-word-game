@@ -1,17 +1,30 @@
-<h1>GAME</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <div class="title">
+        <h2 class="text-center">Welcome to the longest word-game!</h2>
+        <p class="text-center">Here is your grid:</p>
+        <h1 class="text-center" id="grid"><%= @grid.upcase %></h1>
+      </div>
+    </div>
+  </div>
+</div>
 
-
-<p>******** Welcome to the longest word-game!********</p>
-<p>Here is your grid:</p>
-<p><%= @grid %></p>
-<p>*****************************************************"</p>
-
-<div class="form">
-  <form action="/score">
-    <h2>What's your best shot?</h2>
-    <input type="text" name="attempt">
-    <input type="hidden" name="start_time" value="<%= @start_time %>">
-    <input type="hidden" name="grid" value="<%= @grid %>">
-    <input type="submit">
-  </form>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <div class="form">
+        <form action="/score">
+          <div class="form-group">
+            <label>What's your best shot?</label>
+            <input type="text" name="attempt" placeholder="zezette">
+            <input type="hidden" name="start_time" value="<%= @start_time %>">
+            <input type="hidden" name="grid" value="<%= @grid %>">
+            <button type="submit" class="btn btn-primary">GO!</button>
+            <p><%= session[:score]%></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>

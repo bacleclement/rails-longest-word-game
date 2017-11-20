@@ -23,6 +23,11 @@ class GamesController < ApplicationController
       @message = "Well done"
     end
     @time = (@end_time - @start_time)
+    if session[:score]
+      session[:score] << @score
+    else
+      session[:score] = [@score]
+    end
   end
 
   private
