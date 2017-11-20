@@ -1,0 +1,17 @@
+<h1>GAME</h1>
+
+
+<p>******** Welcome to the longest word-game!********</p>
+<p>Here is your grid:</p>
+<p><%= @grid %></p>
+<p>*****************************************************"</p>
+
+<div class="form">
+  <form action="/score">
+    <h2>What's your best shot?</h2>
+    <input type="text" name="attempt">
+    <input type="hidden" name="start_time" value="<%= @start_time %>">
+    <input type="hidden" name="grid" value="<%= @grid %>">
+    <input type="submit">
+  </form>
+</div>
